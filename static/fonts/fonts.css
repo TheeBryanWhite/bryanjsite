@@ -1,0 +1,37 @@
+@font-face {
+	font-family: "Open Sans";
+	font-weight: 400;
+	src: url("./open-sans/OpenSans-Regular.ttf") format("truetype"),
+	     url("./open-sans/OpenSans-Regular.woff2") format("woff2"),
+		 url("./open-sans/OpenSans-Regular.woff") format("woff");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Open Sans";
+	font-style: italic;
+	font-weight: 400;
+	src: url("./open-sans/OpenSans-Italic.ttf") format("truetype"),
+	     url("./open-sans/OpenSans-Italic.woff2") format("woff2"),
+		 url("./open-sans/OpenSans-Italic.woff") format("woff");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Open Sans";
+	font-weight: 700;
+	src: url("./open-sans/OpenSans-Bold.ttf") format("truetype"),
+	     url("./open-sans/OpenSans-Bold.woff2") format("woff2"),
+		 url("./open-sans/OpenSans-Bold.woff") format("woff");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Open Sans";
+	font-style: italic;
+	font-weight: 700;
+	src: url("./open-sans/OpenSans-BoldItalic.ttf") format("truetype"),
+	     url("./open-sans/OpenSans-BoldItalic.woff2") format("woff2"),
+		 url("./open-sans/OpenSans-BoldItalic.woff") format("woff");
+	font-display: swap;
+}
