@@ -72,15 +72,15 @@ module.exports = {
     //   },
     // },
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'Bryan J Site',
-        short_name: 'bryanjsite',
-        start_url: '/',
-        background_color: '#000',
-        theme_color: '#fff',
-        display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png',
+        name: `Bryan J Site`,
+        short_name: `bryanjsite`,
+        start_url: `/`,
+        background_color: `#000`,
+        theme_color: `#fff`,
+        display: `minimal-ui`,
+        icon: `src/images/gatsby-icon.png`,
       },
     },
     {
@@ -122,7 +122,6 @@ module.exports = {
     //   },
     // },   
     `gatsby-plugin-svgr`,
-    `gatsby-plugin-sharp`,
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
@@ -144,6 +143,7 @@ module.exports = {
         timeRanges: ['short_term', 'medium_term', 'long_term'],
       },
     },
+    `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
   ],
 }
