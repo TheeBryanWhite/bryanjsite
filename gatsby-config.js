@@ -71,18 +71,18 @@ module.exports = {
     //     routeChangeEventName: "gatsby-route-change",
     //   },
     // },
-    // {
-    //   resolve: 'gatsby-plugin-manifest',
-    //   options: {
-    //     name: 'Safercontact website',
-    //     short_name: 'Safercontact',
-    //     start_url: '/',
-    //     background_color: '#000',
-    //     theme_color: '#fff',
-    //     display: 'minimal-ui',
-    //     icon: 'src/images/favicon.png',
-    //   },
-    // },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'Bryan J Site',
+        short_name: 'bryanjsite',
+        start_url: '/',
+        background_color: '#000',
+        theme_color: '#fff',
+        display: 'minimal-ui',
+        icon: 'src/images/triangle.png',
+      },
+    },
     {
       resolve: `gatsby-plugin-emotion`,
       options: {
@@ -121,20 +121,8 @@ module.exports = {
     //     sitemap: ''
     //   },
     // },   
-    'gatsby-plugin-svgr',
+    `gatsby-plugin-svgr`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-      },
-    },
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
