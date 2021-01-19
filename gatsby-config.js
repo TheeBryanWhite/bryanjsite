@@ -80,7 +80,7 @@ module.exports = {
         background_color: '#000',
         theme_color: '#fff',
         display: 'minimal-ui',
-        icon: 'src/images/favicon.png',
+        icon: 'src/images/gatsby-icon.png',
       },
     },
     {
