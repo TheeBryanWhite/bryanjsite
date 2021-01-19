@@ -17,7 +17,9 @@ class Helpers {
 		const colorMap = [
 			{'black': {'hex': '#000000'}},
 			{'white': {'hex': '#ffffff'}},
-			{'yellow': {'hex': '#ffff00'}}
+			{'yellow': {'hex': '#ffff00'}},
+			{'neumorphicBg': {'hex': '#e0e0e0'}},
+			{'evenRows': {'hex': '#999999'}}
 		]
 
 		let convertThis = null

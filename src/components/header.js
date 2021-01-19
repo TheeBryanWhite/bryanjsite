@@ -10,6 +10,10 @@ import { ReactComponent as SVGChat } from '../svg/chat.svg'
 
 let black = new Helpers('black')
 black = black.defaultColors()
+let white = new Helpers('white')
+white = white.defaultColors()
+let yellow = new Helpers('yellow')
+yellow = yellow.defaultColors()
 
 const containerMargin = new Helpers(32)
 const Container = styled.div`
@@ -37,7 +41,9 @@ const SocialItem = styled.li`
 `
 
 const icon = css`
-  fill: #ffffff;
+  fill: rgb(${yellow});
+  opacity: 1;
+  transition: all 0.2s linear;
   width: 40px;
 `
 const hideThis = new GlobalStyles()
@@ -47,6 +53,13 @@ const buttonPadding = css`
   display: block;
   padding: 15px;
 `
+const hoverwhite = css({
+  fill: `rgb(${white})`
+})
+
+const hoverOrFocus = css({
+  '&:hover,&:focus': hoverwhite
+})
 
 const Header = () => (
   <HeaderComp>
@@ -54,25 +67,25 @@ const Header = () => (
       <SocialList>
         <SocialItem>
           <a css={buttonPadding} href="https://github.com/TheeBryanWhite" target="_blank" rel="noreferrer">
-            <SVGGithub css={icon} />
+            <SVGGithub css={[icon, hoverOrFocus]} />
             <span css={ScreenReaderText} className="screen-reader-text">Github</span>
           </a>
         </SocialItem>
         <SocialItem>
           <a css={buttonPadding} href="https://codepen.io/ThatWerewolfTho" target="_blank" rel="noreferrer">
-            <SVGCodepen css={icon} />
+            <SVGCodepen css={[icon, hoverOrFocus]} />
             <span css={ScreenReaderText} className="screen-reader-text">Codepen</span>
           </a>
         </SocialItem>
         <SocialItem>
           <a css={buttonPadding} href="https://twitter.com/ThatWerewolfTho" target="_blank" rel="noreferrer">
-            <SVGTwitter css={icon} />
+            <SVGTwitter css={[icon, hoverOrFocus]} />
             <span css={ScreenReaderText} className="screen-reader-text">Twitter</span>
           </a>
         </SocialItem>
         <SocialItem>
           <a css={buttonPadding} href="mailto:bryan@bryanjwhite.com">
-            <SVGChat css={icon} />
+            <SVGChat css={[icon, hoverOrFocus]} />
             <span css={ScreenReaderText} className="screen-reader-text">Email</span>
           </a>
         </SocialItem>
