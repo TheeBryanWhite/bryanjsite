@@ -72,7 +72,6 @@ const ThreeUp = props => {
 				<Bios>
 					{
 					compoData.items.map((bio, index) => {
-						console.log(bio)
 						const imgData = bio.three_up_image.fluid
 						return(
 							<Bio key={index}>

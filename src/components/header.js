@@ -9,11 +9,8 @@ import { ReactComponent as SVGTwitter } from '../svg/twitter.svg'
 import { ReactComponent as SVGChat } from '../svg/chat.svg'
 
 let black = new Helpers('black')
-black = black.defaultColors()
 let white = new Helpers('white')
-white = white.defaultColors()
 let yellow = new Helpers('yellow')
-yellow = yellow.defaultColors()
 
 const containerMargin = new Helpers(32)
 const Container = styled.div`
@@ -21,7 +18,7 @@ const Container = styled.div`
 `
 
 const HeaderComp = styled.header`
-  background-color: rgba(${black}, 0.8);
+  background-color: rgba(${black.defaultColors()}, 0.8);
   display: flex;
   justify-content: flex-end;
   position: fixed;
@@ -41,14 +38,10 @@ const SocialItem = styled.li`
 `
 
 const icon = css`
-  fill: rgb(${yellow});
+  fill: rgb(${yellow.defaultColors()});
   opacity: 1;
   transition: all 0.2s linear;
   width: 40px;
-
-  &:hover,&:focus {
-    fill: rgb(${white});
-  }
 `
 const hideThis = new GlobalStyles()
 const ScreenReaderText = css`${hideThis.screenReaderText()}`
@@ -57,6 +50,13 @@ const buttonPadding = css`
   display: block;
   padding: 15px;
 `
+const hoverwhite = css({
+  fill: `rgb(${white.defaultColors()})`
+})
+
+const hoverOrFocus = css({
+  '&:hover,&:focus': hoverwhite
+})
 
 const Header = () => (
   <HeaderComp>
@@ -64,25 +64,25 @@ const Header = () => (
       <SocialList>
         <SocialItem>
           <a css={buttonPadding} href="https://github.com/TheeBryanWhite" target="_blank" rel="noreferrer">
-            <SVGGithub />
+            <SVGGithub css={[icon, hoverOrFocus]} />
             <span css={ScreenReaderText} className="screen-reader-text">Github</span>
           </a>
         </SocialItem>
         <SocialItem>
           <a css={buttonPadding} href="https://codepen.io/ThatWerewolfTho" target="_blank" rel="noreferrer">
-            <SVGCodepen />
+            <SVGCodepen css={[icon, hoverOrFocus]} />
             <span css={ScreenReaderText} className="screen-reader-text">Codepen</span>
           </a>
         </SocialItem>
         <SocialItem>
           <a css={buttonPadding} href="https://twitter.com/ThatWerewolfTho" target="_blank" rel="noreferrer">
-            <SVGTwitter />
+            <SVGTwitter css={[icon, hoverOrFocus]} />
             <span css={ScreenReaderText} className="screen-reader-text">Twitter</span>
           </a>
         </SocialItem>
         <SocialItem>
           <a css={buttonPadding} href="mailto:bryan@bryanjwhite.com">
-            <SVGChat />
+            <SVGChat css={[icon, hoverOrFocus]} />
             <span css={ScreenReaderText} className="screen-reader-text">Email</span>
           </a>
         </SocialItem>
