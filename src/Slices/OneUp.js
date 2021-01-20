@@ -61,8 +61,6 @@ const OneUp = props => {
 					Tag="div"
 					className="one-col-body"
 					fluid={imageData}
-					fadeIn={false}
-					loading="eager"
 				>
 					<Container css={{'margin': '0 auto', 'padding': '60px'}}>
 						<div css={{'margin': '0 auto', 'maxWidth': '800px'}} className="about-body">

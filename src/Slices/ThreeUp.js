@@ -79,8 +79,6 @@ const ThreeUp = props => {
 									<Img 
 										css={objectFit}
 										fluid={imgData} 
-										fadeIn={false}
-										loading="eager" 
 										alt={bio.three_up_image.alt} 
 									/>
 								</BioImage>
