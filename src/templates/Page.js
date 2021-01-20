@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import { withPreview } from 'gatsby-source-prismic'
 import usePreviewData from '../utilities/UsePreviewData'
 import Layout from '../components/layout'
+import SEO from "../components/seo"
 import SliceZone from '../components/SliceZone/SliceZone'
 
 const Page = ({ data: { prismicPage, pages }}) => {
@@ -12,6 +13,7 @@ const Page = ({ data: { prismicPage, pages }}) => {
 
   return (
     <Layout>
+      <SEO title={prismicPage.uid} />
       <Helmet>
         <script async defer src="https://static.cdn.prismic.io/prismic.js?new=true&repo=bryanjsite"></script>
       </Helmet>
@@ -50,6 +52,7 @@ query MyQuery($uid: String!) {
               html
             }
             three_up_image {
+              alt
               fluid {
                 ...GatsbyPrismicImageFluid
               }

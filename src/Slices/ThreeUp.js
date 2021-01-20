@@ -72,11 +72,12 @@ const ThreeUp = props => {
 				<Bios>
 					{
 					compoData.items.map((bio, index) => {
+						console.log(bio)
 						const imgData = bio.three_up_image.fluid
 						return(
 							<Bio key={index}>
 								<BioImage>
-									<Img css={objectFit} fluid={imgData} />
+									<Img css={objectFit} fluid={imgData} alt={bio.three_up_image.alt} />
 								</BioImage>
 								<BioContent dangerouslySetInnerHTML={{ __html: bio.three_up_block.html }} />
 							</Bio>
