@@ -24,7 +24,6 @@
     "gatsby-plugin-sharp": "^2.8.0",
     "gatsby-plugin-sitemap": "^2.11.0",
     "gatsby-plugin-svgr": "^2.1.0",
-    "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^2.5.0",
     "gatsby-source-prismic": "^3.3.1",
     "gatsby-source-prismic-graphql": "^3.6.2",
@@ -37,7 +36,8 @@
     "react": "^16.12.0",
     "react-dom": "^16.14.0",
     "react-helmet": "^6.1.0",
-    "react-lighthouse-viewer": "^6.0.2"
+    "react-lighthouse-viewer": "^6.0.2",
+    "typeface-open-sans": "^1.1.13"
   },
   "devDependencies": {
     "@emotion/babel-plugin": "^11.1.2",

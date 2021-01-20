@@ -39,7 +39,6 @@ module.exports = {
         },
       },
     },
-    `gatsby-plugin-preload-fonts`,
     {
       resolve: "gatsby-plugin-guess-js",
       options: {
@@ -125,15 +124,6 @@ module.exports = {
     },   
     `gatsby-plugin-svgr`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: "gatsby-plugin-web-font-loader",
-      options: {
-        custom: {
-          families: ["Open Sans"],
-          urls: ["/fonts/fonts.css"],
-        },
-      },
-    },
     {
       resolve: `gatsby-source-spotify`,
       options: {
