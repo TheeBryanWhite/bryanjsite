@@ -110,18 +110,18 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    {
-      resolve: 'gatsby-plugin-robots-txt',
-      options: {
-        host: '',
-        policy: [{
-          userAgent: '*',
-          allow: '/',
-        }],
-        output: '/robots.txt',
-        sitemap: '/sitemap.xml'
-      },
-    },   
+    // {
+    //   resolve: 'gatsby-plugin-robots-txt',
+    //   options: {
+    //     host: '',
+    //     policy: [{
+    //       userAgent: '*',
+    //       allow: '/',
+    //     }],
+    //     output: '/robots.txt',
+    //     sitemap: 'https://www.bryanjwhite.com/sitemap.xml'
+    //   },
+    // },   
     `gatsby-plugin-svgr`,
     `gatsby-plugin-sharp`,
     {
