@@ -62,15 +62,15 @@ module.exports = {
     //     defer: true,
     //   },
     // },
-    // {
-    //   resolve: 'gatsby-plugin-google-tagmanager',
-    //   options: {
-    //     id: 'GTM-58X3Z98',
-    //     includeInDevelopment: false,
-    //     defaultDataLayer: { platform: "gatsby" },
-    //     routeChangeEventName: "gatsby-route-change",
-    //   },
-    // },
+    {
+      resolve: 'gatsby-plugin-google-tagmanager',
+      options: {
+        id: 'GTM-MWZFZ66',
+        includeInDevelopment: false,
+        defaultDataLayer: { platform: "gatsby" },
+        routeChangeEventName: "gatsby-route-change",
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
