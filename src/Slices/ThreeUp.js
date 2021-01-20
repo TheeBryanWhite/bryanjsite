@@ -11,6 +11,10 @@ const Container = styled.div`
 	margin: 60px auto;
 	max-width: 1440px;
 	padding: 0 ${containerMargin.toRem};
+
+	h1 {
+		text-align: center;
+	}
 `
 
 const Bios = styled.div`
@@ -64,6 +68,7 @@ const ThreeUp = props => {
 	return(
 		<section id="bio" className="bio">
 			<Container>
+				<div dangerouslySetInnerHTML={{ __html: compoData.primary.three_up_title.html }} />
 				<Bios>
 					{
 					compoData.items.map((bio, index) => {

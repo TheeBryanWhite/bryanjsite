@@ -48,7 +48,15 @@
             "description": "3 column grid",
             "icon": "apps",
             "display": "list",
-            "non-repeat": {},
+            "non-repeat": {
+              "three_up_title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label": "Title"
+                }
+              }
+            },
             "repeat": {
               "three_up_image": {
                 "type": "Image",

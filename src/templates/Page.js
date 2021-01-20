@@ -56,6 +56,11 @@ query MyQuery($uid: String!) {
             }
           }
           slice_type
+          primary {
+            three_up_title {
+              html
+            }
+          }
         }
         ... on PrismicPageBodySpotify {
           id
