@@ -5,6 +5,7 @@ module.exports = {
     title: `Bryan White, Web Developer`,
     description: `Bryan White is a New Hampshire-based web and UI developer who specializes in React.js and Gatsby`,
     author: `Bryan White`,
+    siteUrl: `https://www.bryanjwhite.com`,
   },
   plugins: [
     {
@@ -62,25 +63,25 @@ module.exports = {
     //     defer: true,
     //   },
     // },
+    // {
+    //   resolve: 'gatsby-plugin-google-tagmanager',
+    //   options: {
+    //     id: 'GTM-58X3Z98',
+    //     includeInDevelopment: false,
+    //     defaultDataLayer: { platform: "gatsby" },
+    //     routeChangeEventName: "gatsby-route-change",
+    //   },
+    // },
     {
-      resolve: 'gatsby-plugin-google-tagmanager',
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        id: 'GTM-MWZFZ66',
-        includeInDevelopment: false,
-        defaultDataLayer: { platform: "gatsby" },
-        routeChangeEventName: "gatsby-route-change",
-      },
-    },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Bryan J Site`,
-        short_name: `bryanjsite`,
-        start_url: `/`,
-        background_color: `#000`,
-        theme_color: `#fff`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`,
+        name: 'Bryan J Site',
+        short_name: 'bryanjsite',
+        start_url: '/',
+        background_color: '#000',
+        theme_color: '#fff',
+        display: 'minimal-ui',
+        icon: 'src/images/gatsby-icon.png',
       },
     },
     {
@@ -92,16 +93,16 @@ module.exports = {
         cssPropOptimization: true,
       },
     },
-    // `gatsby-plugin-preact`,
+    `gatsby-plugin-preact`,
     `gatsby-plugin-react-helmet`,
-    // {
-    //   resolve: 'gatsby-plugin-sitemap',
-    //   options: {
-    //     exclude: [
-    //       '/preview',
-    //     ],
-    //   },
-    // },
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        exclude: [
+          '/preview',
+        ],
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -109,19 +110,20 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    // {
-    //   resolve: 'gatsby-plugin-robots-txt',
-    //   options: {
-    //     host: '',
-    //     policy: [{
-    //       userAgent: '*',
-    //       allow: '/',
-    //     }],
-    //     output: '/robots.txt',
-    //     sitemap: ''
-    //   },
-    // },   
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: '',
+        policy: [{
+          userAgent: '*',
+          allow: '/',
+        }],
+        output: '/robots.txt',
+        sitemap: '/sitemap.xml'
+      },
+    },   
     `gatsby-plugin-svgr`,
+    `gatsby-plugin-sharp`,
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
@@ -143,7 +145,6 @@ module.exports = {
         timeRanges: ['short_term', 'medium_term', 'long_term'],
       },
     },
-    `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
   ],
 }
