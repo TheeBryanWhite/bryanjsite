@@ -148,7 +148,7 @@ const Spotify = props => {
 	const compoData = props.input.primary
 
 	return(
-		<section css={{ 'padding': `0 ${imgMargin.toRem()}` }} className="spotify" id="spotify">
+		<section css={{ 'padding': `0 ${imgMargin.toRem()}` }} className="spotify">
 			<Container>
 				<h2 css={{ 'textAlign': 'center' }}><SVGSpotify css={iconSize} /> {compoData.spotify_title.text}</h2>
 

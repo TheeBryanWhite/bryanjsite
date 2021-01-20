@@ -66,7 +66,7 @@ const ThreeUp = props => {
 	const compoData = props.input
 
 	return(
-		<section id="bio" className="bio">
+		<section className="three-col">
 			<Container>
 				<div dangerouslySetInnerHTML={{ __html: compoData.primary.three_up_title.html }} />
 				<Bios>

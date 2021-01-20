@@ -13,7 +13,7 @@ module.exports = {
       options: {
         repositoryName: 'bryanjsite',
         accessToken: 'MC5ZQVlsTEJNQUFDWUFxdEZK.Je-_vWbvv71877-977-977-977-9M0EW77-977-9f--_ve-_vTM1B--_vQnvv70S77-977-977-977-977-977-977-977-9',
-        prismicToolbar: false,
+        prismicToolbar: true,
         linkResolver: () => linkResolver,
         htmlSerializer: ({ node, key, value }) => (
           type,

@@ -34,6 +34,11 @@ const Container = styled.div`
 			text-decoration: underline;
 		}
 	}
+
+	.align-center {
+		display: block;
+		text-align: center;
+	}
 `
 
 const opaqueBg = css({
@@ -47,22 +52,40 @@ const bgBefore = css({
 const OneUp = props => {
 	const compoData = props.input.primary
 	const imageData = compoData.one_col_bg_image.fluid
-	return(
-		<section id="about" className="about">
-			<BackgroundImage
-				css={bgBefore}
-				Tag="div"
-				className="about-body"
-				fluid={imageData}
-			>
-				<Container css={{'margin': '0 auto', 'padding': '60px'}}>
-					<div css={{'margin': '0 auto', 'maxWidth': '800px'}} className="about-body">
-						<div dangerouslySetInnerHTML={{ __html: compoData.one_col_body.html }} />
-					</div>
-				</Container>
-			</BackgroundImage>
-		</section>
-	)
+	
+	if (imageData) {
+		return(
+			<section className="one-col">
+				<BackgroundImage
+					css={bgBefore}
+					Tag="div"
+					className="one-col-body"
+					fluid={imageData}
+				>
+					<Container css={{'margin': '0 auto', 'padding': '60px'}}>
+						<div css={{'margin': '0 auto', 'maxWidth': '800px'}} className="about-body">
+							<div dangerouslySetInnerHTML={{ __html: compoData.one_col_body.html }} />
+						</div>
+					</Container>
+				</BackgroundImage>
+			</section>
+		)
+	} else {
+		return(
+			<section className="one-col">
+				<div
+					css={bgBefore}
+					className="one-col-body"
+				>
+					<Container css={{'margin': '0 auto', 'padding': '60px'}}>
+						<div className="about-body">
+							<div dangerouslySetInnerHTML={{ __html: compoData.one_col_body.html }} />
+						</div>
+					</Container>
+				</div>
+			</section>
+		)
+	}
 }
 
 export default OneUp

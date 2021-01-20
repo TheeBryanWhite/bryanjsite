@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from 'gatsby'
+import { withUnpublishedPreview } from 'gatsby-source-prismic'
 import BackgroundImage from 'gatsby-background-image'
 import styled from "@emotion/styled"
 import { css } from "@emotion/react"
@@ -7,6 +8,7 @@ import Helpers from '../utilities/Helpers'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Page from '../templates/Page'
 
 let white = new Helpers('white')
 let black = new Helpers('black')
@@ -91,4 +93,9 @@ const NotFoundPage = () => {
   )
 }
 
-export default NotFoundPage
+// If an unpublished `page` document is previewed, PageTemplate will be rendered.
+export default withUnpublishedPreview(NotFoundPage, {
+	templateMap: {
+	  page: Page
+	},
+  })
