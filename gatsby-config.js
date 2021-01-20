@@ -39,6 +39,7 @@ module.exports = {
         },
       },
     },
+    `gatsby-plugin-preload-fonts`,
     {
       resolve: "gatsby-plugin-guess-js",
       options: {
