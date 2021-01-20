@@ -41,6 +41,7 @@
   },
   "devDependencies": {
     "@emotion/babel-plugin": "^11.1.2",
+    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.18",
     "prettier": "2.2.1"
   },
   "keywords": [

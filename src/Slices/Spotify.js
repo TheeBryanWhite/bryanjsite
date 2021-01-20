@@ -66,6 +66,15 @@ const Spotify = props => {
 		max-width: 800px;
 		overflow: hidden;
 		padding: ${containerMargin.toRem};
+
+		a {
+			color: rgb(${black.defaultColors()});
+			text-decoration: none;
+
+			&:hover,&:focus {
+				text-decoration: underline;
+			}
+		}
 	`
 
 	const TrackList = styled.div`
@@ -83,6 +92,10 @@ const Spotify = props => {
 		align-items: center;
 		display: flex;
 		padding: ${trackPadding.toRem()} 0;
+
+		&:nth-of-type(even) {
+			background-color: rgb(${evenRowsColor.defaultColors()});
+		}
 	`
 
 	const imgMargin = new Helpers(32)
@@ -109,19 +122,6 @@ const Spotify = props => {
 		margin: 0;
 	`
 
-	const link = css`
-		color: rgb(${black.defaultColors()});
-		text-decoration: none;
-	`
-
-	const hoverLink = css({
-		'textDecoration': 'underline'
-	})
-	  
-	const hoverOrFocus = css({
-		'&:hover,&:focus': hoverLink
-	})
-
 	const imgLink = css`
 		display: inline-block;
 	`
@@ -137,14 +137,6 @@ const Spotify = props => {
 		width: 45px;
 	`
 
-	const evenRows = css({
-		'backgroundColor': `rgb(${evenRowsColor.defaultColors()})`
-	  })
-	  
-	  const evenType = css({
-		'&:nth-of-type(even)': evenRows
-	  })
-
 	const compoData = props.input.primary
 
 	return(
@@ -157,14 +149,14 @@ const Spotify = props => {
 						{
 							trackData.map(track => {
 								return (
-									<Track css={evenType} key={track.node.id}>
+									<Track key={track.node.id}>
 										<AlbumImg className="album-image">
 											<a css={imgLink} href={track.node.track.external_urls.spotify} target="_blank" rel="noreferrer"><img css={imgFit} src={track.node.track.album.images[2].url} alt={track.node.track.album.name} /></a>
 										</AlbumImg>
 										<div className="album-data">
-											<Artist><a css={[link, hoverOrFocus]} href={track.node.track.external_urls.spotify} target="_blank" rel="noreferrer">{track.node.track.artistString}</a></Artist>
-											<Title><a css={[link, hoverOrFocus]} href={track.node.track.external_urls.spotify} target="_blank" rel="noreferrer">{track.node.track.name}</a></Title>
-											<Album><a css={[link, hoverOrFocus]} href={track.node.track.external_urls.spotify} target="_blank" rel="noreferrer">{track.node.track.album.name}</a></Album>
+											<Artist><a href={track.node.track.external_urls.spotify} target="_blank" rel="noreferrer">{track.node.track.artistString}</a></Artist>
+											<Title><a href={track.node.track.external_urls.spotify} target="_blank" rel="noreferrer">{track.node.track.name}</a></Title>
+											<Album><a href={track.node.track.external_urls.spotify} target="_blank" rel="noreferrer">{track.node.track.album.name}</a></Album>
 										</div>
 									</Track>
 								)

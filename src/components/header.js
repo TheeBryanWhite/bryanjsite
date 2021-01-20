@@ -45,6 +45,10 @@ const icon = css`
   opacity: 1;
   transition: all 0.2s linear;
   width: 40px;
+
+  &:hover,&:focus {
+    fill: rgb(${white});
+  }
 `
 const hideThis = new GlobalStyles()
 const ScreenReaderText = css`${hideThis.screenReaderText()}`
@@ -53,13 +57,6 @@ const buttonPadding = css`
   display: block;
   padding: 15px;
 `
-const hoverwhite = css({
-  fill: `rgb(${white})`
-})
-
-const hoverOrFocus = css({
-  '&:hover,&:focus': hoverwhite
-})
 
 const Header = () => (
   <HeaderComp>
@@ -67,25 +64,25 @@ const Header = () => (
       <SocialList>
         <SocialItem>
           <a css={buttonPadding} href="https://github.com/TheeBryanWhite" target="_blank" rel="noreferrer">
-            <SVGGithub css={[icon, hoverOrFocus]} />
+            <SVGGithub />
             <span css={ScreenReaderText} className="screen-reader-text">Github</span>
           </a>
         </SocialItem>
         <SocialItem>
           <a css={buttonPadding} href="https://codepen.io/ThatWerewolfTho" target="_blank" rel="noreferrer">
-            <SVGCodepen css={[icon, hoverOrFocus]} />
+            <SVGCodepen />
             <span css={ScreenReaderText} className="screen-reader-text">Codepen</span>
           </a>
         </SocialItem>
         <SocialItem>
           <a css={buttonPadding} href="https://twitter.com/ThatWerewolfTho" target="_blank" rel="noreferrer">
-            <SVGTwitter css={[icon, hoverOrFocus]} />
+            <SVGTwitter />
             <span css={ScreenReaderText} className="screen-reader-text">Twitter</span>
           </a>
         </SocialItem>
         <SocialItem>
           <a css={buttonPadding} href="mailto:bryan@bryanjwhite.com">
-            <SVGChat css={[icon, hoverOrFocus]} />
+            <SVGChat />
             <span css={ScreenReaderText} className="screen-reader-text">Email</span>
           </a>
         </SocialItem>
