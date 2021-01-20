@@ -3,7 +3,7 @@ import { mergePrismicPreviewData } from 'gatsby-source-prismic'
 
 const IS_BROWSER = typeof window !== 'undefined'
 
-export default function usePreviewData(staticData) {
+const usePreviewData = (staticData) => {
   return useMemo(() => {
     if (!IS_BROWSER || !window.__PRISMIC_PREVIEW_DATA__) return staticData
 
@@ -13,3 +13,5 @@ export default function usePreviewData(staticData) {
     })
   }, [staticData])
 }
+
+export default usePreviewData

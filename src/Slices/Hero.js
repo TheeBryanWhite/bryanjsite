@@ -1,4 +1,4 @@
-import React from "react"
+import React from "preact"
 import BackgroundImage from 'gatsby-background-image'
 import styled from "@emotion/styled"
 import { css } from "@emotion/react"
@@ -75,6 +75,8 @@ const Hero = props => {
 			Tag="section"
 			className="hero"
 			fluid={imageData}
+			fadeIn={false}
+			loading="eager"
 		>
 			<Overlay />
 			<Container>

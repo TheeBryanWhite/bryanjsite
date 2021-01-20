@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'preact'
 import { PreviewStoreProvider } from 'gatsby-source-prismic'
 
 require("typeface-open-sans")

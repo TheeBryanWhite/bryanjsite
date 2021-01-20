@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'preact'
 import styled from '@emotion/styled'
 import BackgroundImage from 'gatsby-background-image'
 import { css } from "@emotion/react"
@@ -61,6 +61,8 @@ const OneUp = props => {
 					Tag="div"
 					className="one-col-body"
 					fluid={imageData}
+					fadeIn={false}
+					loading="eager"
 				>
 					<Container css={{'margin': '0 auto', 'padding': '60px'}}>
 						<div css={{'margin': '0 auto', 'maxWidth': '800px'}} className="about-body">

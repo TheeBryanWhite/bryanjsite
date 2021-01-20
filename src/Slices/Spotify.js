@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'preact'
 import { graphql, useStaticQuery } from 'gatsby'
 import styled from '@emotion/styled'
 import { css } from "@emotion/react"
