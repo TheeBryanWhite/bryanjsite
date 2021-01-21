@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'preact'
 import styled from '@emotion/styled'
 import BackgroundImage from 'gatsby-background-image'
 import { css } from "@emotion/react"

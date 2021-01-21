@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'preact'
 import Helmet from "react-helmet"
 import { graphql } from 'gatsby'
 import { withPreview } from 'gatsby-source-prismic'

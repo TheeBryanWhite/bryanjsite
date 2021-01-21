@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'preact'
 import { withPreviewResolver } from 'gatsby-source-prismic'
 
 import linkResolver from '../utilities/linkResolver'

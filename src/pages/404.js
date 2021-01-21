@@ -1,4 +1,4 @@
-import React from "react"
+import React from "preact"
 import { graphql, useStaticQuery } from 'gatsby'
 import { withUnpublishedPreview } from 'gatsby-source-prismic'
 import BackgroundImage from 'gatsby-background-image'
