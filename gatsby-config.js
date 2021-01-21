@@ -33,16 +33,9 @@ module.exports = {
         schemas: {
           page: require("./src/schemas/page.json"),
         },
-        imageImgixParams: {
-          auto: 'compress,format',
-          fit: 'max',
-          q: 50,
-        },
-        imagePlaceholderImgixParams: {
-          w: 100,
-          blur: 15,
-          q: 50,
-        },
+        shouldDownloadImage: ({ node, key, value }) => {
+          return true
+        }
       },
     },
     {

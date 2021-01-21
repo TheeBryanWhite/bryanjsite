@@ -67,7 +67,7 @@ const positionRel = css`
 
 const Hero = props => {
 	const compoData = props.input.primary
-	const imageData = compoData.background_image.fluid
+	const imageData = compoData.background_image.localFile.childImageSharp.fluid
 
 	return (
 		<BackgroundImage

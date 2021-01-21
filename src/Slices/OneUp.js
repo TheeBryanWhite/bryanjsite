@@ -51,9 +51,9 @@ const bgBefore = css({
 
 const OneUp = props => {
 	const compoData = props.input.primary
-	const imageData = compoData.one_col_bg_image.fluid
 	
-	if (imageData) {
+	if (compoData.one_col_bg_image.localFile) {
+		const imageData = compoData.one_col_bg_image.localFile.childImageSharp.fluid
 		return(
 			<section className="one-col">
 				<BackgroundImage

@@ -38,8 +38,12 @@ query MyQuery($uid: String!) {
               html
             }
             background_image {
-              fluid {
-                ...GatsbyPrismicImageFluid
+              localFile {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
               }
             }
           }
@@ -52,9 +56,12 @@ query MyQuery($uid: String!) {
               html
             }
             three_up_image {
-              alt
-              fluid {
-                ...GatsbyPrismicImageFluid
+              localFile {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
               }
             }
           }
@@ -82,8 +89,12 @@ query MyQuery($uid: String!) {
               html
             }
             one_col_bg_image {
-              fluid {
-                ...GatsbyPrismicImageFluid
+              localFile {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
               }
             }
           }
