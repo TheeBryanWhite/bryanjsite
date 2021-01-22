@@ -48,7 +48,7 @@ function SEO({ description, lang, meta, title, image }) {
         },
         {
           property: `og:image`,
-          content: host + image,
+          content: `https://${host + image}`,
         },
         {
           property: `og:type`,
