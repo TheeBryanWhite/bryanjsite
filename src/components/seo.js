@@ -19,6 +19,12 @@ function SEO({ description, lang, meta, title, image }) {
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
+  
+  let host = null
+
+  if (typeof window !== `undefined`) {
+    host = window.location.host
+  }  
 
   return (
     <Helmet
@@ -42,7 +48,7 @@ function SEO({ description, lang, meta, title, image }) {
         },
         {
           property: `og:image`,
-          content: window.location.host + image,
+          content: host + image,
         },
         {
           property: `og:type`,
