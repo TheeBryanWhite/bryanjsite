@@ -99,9 +99,6 @@ const Spotify = props => {
 	`
 
 	const imgMargin = new Helpers(32)
-	const AlbumImg = styled.div`
-		  margin: 0 ${imgMargin.toRem()};
-	`
 
 	const Artist = styled.p`
 		background-color: rgb(${yellow.defaultColors()});
@@ -119,15 +116,6 @@ const Spotify = props => {
 	const Album = styled.p`
 		font-size: ${albumSize.toRem()};
 		font-weight: 400;
-		margin: 0;
-	`
-
-	const imgLink = css`
-		display: inline-block;
-	`
-
-	const imgFit = css`
-		display: block;
 		margin: 0;
 	`
 
@@ -150,9 +138,6 @@ const Spotify = props => {
 							trackData.map(track => {
 								return (
 									<Track key={track.node.id}>
-										<AlbumImg className="album-image">
-											<a css={imgLink} href={track.node.track.external_urls.spotify} target="_blank" rel="noreferrer"><img css={imgFit} src={track.node.track.album.images[2].url} alt={track.node.track.album.name} /></a>
-										</AlbumImg>
 										<div className="album-data">
 											<Artist><a href={track.node.track.external_urls.spotify} target="_blank" rel="noreferrer">{track.node.track.artistString}</a></Artist>
 											<Title><a href={track.node.track.external_urls.spotify} target="_blank" rel="noreferrer">{track.node.track.name}</a></Title>
