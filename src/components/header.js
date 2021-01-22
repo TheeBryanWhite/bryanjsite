@@ -75,12 +75,6 @@ const Header = () => (
           </a>
         </SocialItem>
         <SocialItem>
-          <a css={buttonPadding} href="https://twitter.com/ThatWerewolfTho" target="_blank" rel="noreferrer">
-            <SVGTwitter css={[icon, hoverOrFocus]} />
-            <span css={ScreenReaderText} className="screen-reader-text">Twitter</span>
-          </a>
-        </SocialItem>
-        <SocialItem>
           <a css={buttonPadding} href="mailto:bryan@bryanjwhite.com">
             <SVGChat css={[icon, hoverOrFocus]} />
             <span css={ScreenReaderText} className="screen-reader-text">Email</span>
