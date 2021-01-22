@@ -91,7 +91,7 @@ const Spotify = props => {
 	const Track = styled.div`
 		align-items: center;
 		display: flex;
-		padding: ${trackPadding.toRem()} 0;
+		padding: ${trackPadding.toRem()};
 
 		&:nth-of-type(even) {
 			background-color: rgb(${evenRowsColor.defaultColors()});
