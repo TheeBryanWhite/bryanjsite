@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import { useMemo } from 'use-memo-one'
 import { mergePrismicPreviewData } from 'gatsby-source-prismic'
 
 const IS_BROWSER = typeof window !== 'undefined'

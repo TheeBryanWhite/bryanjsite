@@ -1,11 +1,4 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
-import React from "react"
+import React from "preact/compat"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from '@emotion/styled'
 import { css } from "@emotion/react"
