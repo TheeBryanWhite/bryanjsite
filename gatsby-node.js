@@ -17,9 +17,24 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
+  const posts = await graphql(`
+  {
+    allPrismicPost {
+      edges {
+        node {
+          id
+          uid
+        }
+      }
+    }
+  }
+  `)
+
   const pageList = pages.data.allPrismicPage.edges
+  const postList = posts.data.allPrismicPost.edges
 
   const pageTemplate = require.resolve("./src/templates/Page.js")
+  const postTemplate = require.resolve("./src/templates/Post.js")
 
   pageList.forEach(edge => {  
     const url = `/${edge.node.uid}`
@@ -41,5 +56,17 @@ exports.createPages = async ({ graphql, actions }) => {
         },
       })
     }
+  })
+
+  postList.forEach(edge => {
+    const url = `/${edge.node.uid}`
+
+    createPage({
+      path: `/blog${url}`,
+        component: postTemplate,
+        context: {
+          uid: edge.node.uid,
+        },
+    })
   })
 }
